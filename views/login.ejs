@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+  </head>
+  <body>
+    <h3
+      style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 30px;"
+    >
+      LOGIN IN NOW
+    </h3>
+    <div class="form-format">
+      <% include message %>
+      <form action="/users/login" method="post">
+        <input
+          type="text"
+          name="username"
+          value="<%= typeof username != 'undefined' ? username : '' %>"
+          placeholder="Please input username"
+        />
+        <input
+          type="password"
+          name="password"
+          value="<%= typeof password != 'undefined' ? password : '' %>"
+          placeholder="Please input password"
+        />
+        <input type="submit" value="LOGIN" />
+        <div>
+          If you do not have username,<a href="/register">Register now</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
