@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CHAT ROOM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <%- include head %>
+  </head>
+  <body>
+    <%- include('bar', {username: username}) %>
+    <h1 style="text-align: center;">CHAT NOW!</h1>
+    <div id="mario-chat">
+      <div id="chat-window">
+        <div id="output"></div>
+      </div>
+      <span id="handle"><%= username %></span>
+      <input id="message" type="text" placeholder="Message" />
+      <button id="send">Send</button>
+    </div>
+    <script src="/javascripts/chat.js" type="text/javascript"></script>
+  </body>
+</html>

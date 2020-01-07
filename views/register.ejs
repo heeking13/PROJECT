@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <%- include head %>
+  </head>
+  <body>
+    <h3
+      style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 30px;"
+    >
+      REGISTER NOW
+    </h3>
+    <div class="form-format">
+      <% include message %>
+      <form action="/users/register" method="post">
+        <input
+          type="text"
+          name="username"
+          value="<%= typeof username != 'undefined' ? username : '' %>"
+          placeholder="Please input username (6-20)"
+        />
+        <input
+          type="password"
+          name="password"
+          value="<%= typeof password != 'undefined' ? password : '' %>"
+          placeholder="Please input password (6-20)"
+        />
+        <input
+          type="password"
+          name="password1"
+          value="<%= typeof password1 != 'undefined' ? password1 : '' %>"
+          placeholder="Please confirm password"
+        />
+        <input type="submit" value="SUBMIT" />
+        <div>If you have username,<a href="/login"> Login in now</a></div>
+      </form>
+    </div>
+  </body>
+</html>
